@@ -5,10 +5,6 @@ import { Saira_Stencil_One } from "next/font/google";
 import { PrimaryInputWSearchIcon } from "./primary-input";
 import { CartControl } from "./cart-control";
 
-interface HeaderProps {
-
-}
-
 const sairaStencil = Saira_Stencil_One({
   subsets: ["latin"],
   weight: ["400"],
@@ -35,10 +31,10 @@ const Logo = styled.a`
   line-height: 150%;
 `
 
-export function Header(props: HeaderProps) {
+export function Header() {
   return (
     <TagHeader>
-      <Logo className={sairaStencil.className}>Capputeeno</Logo>
+      <Logo className={sairaStencil.className}>capputeeno</Logo>
       <div>
         <PrimaryInputWSearchIcon placeholder="Procurando por algo específico" />
         <CartControl />
