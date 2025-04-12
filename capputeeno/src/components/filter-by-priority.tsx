@@ -30,13 +30,14 @@ const FilterContainer = styled.div`
   }
 `
 const PriorityList = styled.ul`
+  position: absolute;
   width: 176px;
   list-style: none;
-  position: absolute;
-  background: var(--white);
+  background: #FFFFFF;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 12px 16px;
+  z-index: 999;
 
   top: 100%;
   right: 2.5%;
