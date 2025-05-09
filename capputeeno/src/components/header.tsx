@@ -15,7 +15,7 @@ const TagHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 160px;
+  padding: 12px 24px;
 
   > div {
     display: flex;
@@ -24,12 +24,25 @@ const TagHeader = styled.header`
   
     gap: 24px;
   }
+  
+  @media (min-width: ${props => props.theme.desktopBreakPoint}) {
+    padding: 20px 160px;
+  }
 `
 const Logo = styled.a`
   color: var(--logo-color);
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 150%;
+  margin-right: 20px;
+  
+  @media (min-width: ${props => props.theme.tabletBreakPoint}) {
+    font-size: 24px;
+  }
+
+  @media (min-width: ${props => props.theme.desktopBreakPoint}) {
+    font-size: 40px;
+  }
 `
 
 export function Header() {

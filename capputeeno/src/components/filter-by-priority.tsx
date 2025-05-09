@@ -40,7 +40,7 @@ const PriorityList = styled.ul`
   z-index: 999;
 
   top: 100%;
-  right: 2.5%;
+  right: 8px;
 
   li {
     color: var(--text-dark);

@@ -20,11 +20,16 @@ const FilterItem = styled.li<FilterItemProps>`
   color: var(--text-dark);
   text-transform: uppercase;
   text-align: center;
-  line-height: 22px;
-  font-size: 16px;
+  line-height: 18px;
+  font-size: 12px;
   cursor: pointer;
   
-  border-bottom: ${props => props.selected ? '4px solid var(--orange-low)' : ''}
+  border-bottom: ${props => props.selected ? '4px solid var(--orange-low)' : ''};
+  
+  @media (min-width: ${props => props.theme.desktopBreakPoint}) {
+    line-height: 22px;
+    font-size: 16px;
+  }
 `
 
 export function FilterByType() {
