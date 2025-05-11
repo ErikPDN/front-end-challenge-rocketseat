@@ -12,7 +12,6 @@ const ListContainer = styled.div`
   margin-top: 32px;
 `
 
-
 export function ProductsList() {
   const { data } = useProducts();
 
@@ -23,7 +22,9 @@ export function ProductsList() {
           title={product.name}
           image={product.image_url}
           price={product.price_in_cents}
-          key={product.id} />
+          key={product.id}
+          id={product.id}
+        />
       ))}
     </ListContainer>
   )

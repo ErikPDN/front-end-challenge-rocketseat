@@ -2,6 +2,7 @@
 
 import { DefaultPageLayout } from '@/components/default-page-layout';
 import { styled } from 'styled-components';
+import Image from 'next/image';
 import { BackButton } from '@/components/back-button';
 import { useProduct } from '@/hooks/useProduct';
 import { formatPrice } from '@/utils/format-price';
@@ -113,7 +114,15 @@ export default function Product({ searchParams }: { searchParams: { id: string }
       <Container>
         <BackButton path="/" />
         <section>
-          <img src={data?.image_url} alt="image" />
+          {data?.image_url && (
+            <Image
+              src={data.image_url}
+              alt={data.name}
+              width={640}
+              height={640}
+              style={{ width: '50%', height: 'auto', maxWidth: '640px' }}
+            />
+          )}
           <div>
             <ProductInfo>
               <span>{data?.category}</span>
