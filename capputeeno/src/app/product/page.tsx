@@ -8,7 +8,6 @@ import { useProduct } from '@/hooks/useProduct';
 import { formatPrice } from '@/utils/format-price';
 import { ShopBagIcon } from '@/components/icons/shop-bag-icon';
 
-
 const Container = styled.div`
   display: flex;
   align-items: flex-start;
@@ -106,7 +105,9 @@ const ProductInfo = styled.div`
 `
 
 export default function Product({ searchParams }: { searchParams: { id: string } }) {
-  const { data } = useProduct(searchParams.id);
+  const productId = searchParams?.id
+
+  const { data } = useProduct(productId ?? "");
 
   const handleAddToCart = () => {
     const cartItems = localStorage.getItem('cart-items')
